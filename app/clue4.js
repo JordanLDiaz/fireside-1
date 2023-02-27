@@ -1,7 +1,7 @@
 // We know that to pull off this caper Carmen will be wearing a disguise, we need to figure out what she will look like in order to nab her for sure this time.
 
 // Carmen likes to cycle her outfits and we know on certain days she wears certain outfits, decrypting the early letter we might have some idea of what day, but it might also be offset depending on the calander she is using.
-
+// WHAT ??
 // Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if false. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
 // Example: 
 // input: 'Sunday', false
@@ -10,10 +10,64 @@
 // input: 'Sunday', true
 // output: 7
 
+// I don't understand this one, how do I explain?
+// switch takes in a day (check out w3 schools explanation for js switch statements)
 function daysPosition(day, offset) {
-  // TODO YOUR CODE HERE
+  let output
+  if (!offset) {
+    switch (day.toLowerCase()) {
+      case 'sunday':
+        output = 1
+        break;
+      case 'monday':
+        output = 2
+        break;
+      case 'tuesday':
+        output = 3
+        break;
+      case 'wednesday':
+        output = 4
+        break;
+      case 'thursday':
+        output = 5
+        break;
+      case 'friday':
+        output = 6
+        break;
+      case 'saturday':
+        output = 7
+        break;
+    }
+  }
+  if (offset == true) {
+    switch (day.toLowerCase()) {
+      case 'sunday':
+        output = 7
+        break;
+      case 'monday':
+        output = 1
+        break;
+      case 'tuesday':
+        output = 2
+        break;
+      case 'wednesday':
+        output = 3
+        break;
+      case 'thursday':
+        output = 4
+        break;
+      case 'friday':
+        output = 5
+        break;
+      case 'saturday':
+        output = 6
+        break;
+    }
+  } if (output == undefined) {
+    return "That's not a day of the week"
+  }
+  return output
 }
-
 
 
 // We have found that on the day of the caper is a golf tournament. The prize includes among other things a large coupon to the local costume shop. By keeping track of who is winning we might be able to bribe the winner to get more info for us.
@@ -32,7 +86,28 @@ function daysPosition(day, offset) {
  */
 
 function golfScore(score, par) {
-  // TODO YOUR CODE HERE
+  let difference = score - par
+  if (difference == -3) {
+    return 'Ace'
+  }
+  if (difference == -2) {
+    return 'Eagle'
+  }
+  if (difference == -1) {
+    return 'Birdie'
+  }
+  if (difference == 0) {
+    return 'Par'
+  }
+  if (difference == 1) {
+    return 'Bogie'
+  }
+  if (difference == 2) {
+    return 'Dougble Bogie'
+  }
+  if (difference >= 3) {
+    return 'Ouch'
+  }
 }
 
 

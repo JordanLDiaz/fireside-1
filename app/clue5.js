@@ -11,14 +11,21 @@
 // array. Inside the array, include at least 4 string values.
 
 var carmen = {
-  // TODO YOUR CODE HERE
+  name: 'Carmen SanDiego',
+  heightInInches: 67,
+  captured: false,
+  outfit: ['red hat', 'red coat', 'yellow scarf', 'black boots']
 }
 
 // So the warrent gets updated as quickly as possible our database needs to quickly check if she has been captured
 
 // write a function that returns the value of the captured property on your carmen object using dot notation.
 function isCaptured() {
-  // TODO YOUR CODE HERE
+  if (carmen.captured == true) {
+    return true
+  } else {
+    return false
+  }
 }
 
 // Now that that is settled lets, figure out where we are going from this plane ticket stub we found where some information has been scrambled

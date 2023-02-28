@@ -11,7 +11,8 @@
 // output: 7
 
 
-// switch takes in a day (check out w3 schools explanation for js switch statements)
+// switch takes in a day (check out w3 schools explanation for js switch statements) https://www.w3schools.com/js/js_switch.asp
+// How it works: switch expression is evaluated once, the value of the expression is compared with values of each case, if theres a match, associated block of code is executed, if no match, default code block is executed. 
 function daysPosition(day, offset) {
   let output
   if (!offset) {

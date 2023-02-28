@@ -42,4 +42,5 @@ function messageContainsPhrase(message, phrase) {
   return message.includes(phrase)
 }
 // includes() is a built in js method that performs a case-sensitive search to determine whether one string may be found within another string. If the phrase string is found within the message string, this method will return true, else false
+// connect to filtering by diet from animal murder mystery
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes

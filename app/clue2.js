@@ -53,6 +53,28 @@ function crimeGrader(successful, total) {
   //       return "B";
   //     default:
   //       return "A";
+
+
+  // Another switch
+  //  let wantedLevel = successful / total * 100  
+  //  switch (true) {
+  //     case wantedLevel >= 90:
+  //       return 'A'
+  //       break;
+  //     case wantedLevel >= 80:
+  //       return 'B'
+  //       break;
+  //     case wantedLevel >= 70:
+  //       return 'C'
+  //       break;
+  //     case wantedLevel >= 60:
+  //       return 'D'
+  //       break;
+  //     default:
+  //       return 'F'
+  //       break;
+  //   }
+
 }
 // 
 
@@ -89,6 +111,22 @@ function timeOfDay(hour) {
   //       return "afternoon";
   //     default:
   //       return "evening";
+
+
+  // Another way...
+  //  if (hour >= 5 && hour <= 11) {
+  //   return 'morning'
+  // }
+  // if (hour >= 12 && hour <= 17) {
+  //   return 'afternoon'
+  // }
+  // if (hour >= 18 && hour <= 21) {
+  //   return 'evening'
+  // }
+  // if (hour < 5 || hour > 21) {
+  //   return 'night'
+  // }
+
 }
 
 // Our surveillance team finds the closer we get to catching the associate the hotter the person gets, we can use this to narrow down the person
@@ -102,6 +140,20 @@ function isSuspicious(temp) {
   if (temp > 98.6) {
     return 'suspicious'
   } else return 'not suspicious'
+
+
+  // using some concat ...
+  // let x = 'suspicious'
+  // if (temp <= 98.6) {
+  //   x = 'not ' + x
+  // }
+  // else if (temp > 98.6 && temp < 103) {
+  //   x = x
+  // }
+  // else {
+  //   x = 'very ' + x
+  // }
+  // return x
 }
 
 // We think we might have found the associate, and have added a tracker to their car, to find where the associate is hiding we need to know when their car is stopped
@@ -121,6 +173,9 @@ function isStopped(car) {
   if (car.moving == false) {
     return true
   } else return false
+
+  // most efficient way...
+  // return !car.moving
 }
 
 // We have found everything we need to capture the associate, to make sure they don't elude us we want to make sure we only capture them when they are at home and their asleep.
@@ -138,4 +193,9 @@ function attemptCapture(suspect) {
   if (suspect.atHome == true && suspect.asleep == true) {
     return true
   } else return false
+
+  // another way...
+  // if (suspect.atHome && suspect.asleep) {
+  //   return true
+  // } else return false
 }

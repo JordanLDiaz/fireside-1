@@ -39,18 +39,18 @@ var ticket = {
 
 // Write a function that uses bracket notation to change one of the the ticket's keys to the new value
 function updateValue(key, newValue) {
-  // TODO YOUR CODE HERE
+  ticket[key] = newValue
 }
 
 // Create a function that uses dot or bracket notation to create a property 
 // on the ticket object called 'status' and assign it the parameter that is passed. 
 
 function flightStatus(status) {
-  // TODO YOUR CODE HERE
+  ticket.status = status
 }
 
 
 // The ticket id is messing with our internal systems id's write a function that will delete the id property off of the ticket object (DO NOT EDIT THE PRE-WRITTEN CODE)
 function removeId() {
-  // TODO YOUR CODE HERE
+  delete ticket.id
 }

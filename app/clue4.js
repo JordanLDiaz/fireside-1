@@ -15,7 +15,7 @@
 function daysPosition(day, offset) {
   let output
   if (!offset) {
-    switch (day.toLowerCase()) {
+    switch (day) {
       case 'sunday':
         output = 1
         break;
@@ -40,7 +40,7 @@ function daysPosition(day, offset) {
     }
   }
   if (offset == true) {
-    switch (day.toLowerCase()) {
+    switch (day) {
       case 'sunday':
         output = 7
         break;
@@ -63,7 +63,8 @@ function daysPosition(day, offset) {
         output = 6
         break;
     }
-  } if (output == undefined) {
+  }
+  if (output == undefined) {
     return "That's not a day of the week"
   }
   return output
@@ -133,5 +134,26 @@ function golfScore(score, par) {
 let count = 0
 
 function cardCounter(card) {
-  // TODO YOUR CODE HERE
+  switch (card) {
+    case '2':
+    case '3':
+    case '4':
+    case '5':
+    case '6':
+      count++;
+      break;
+    case '10':
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+      count--;
+      break;
+    default:
+  }
+  if (count > 0) {
+    return count + 'Bet';
+  } else {
+    return count + 'Hold';
+  }
 }

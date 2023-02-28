@@ -13,6 +13,8 @@ function cubed(x) {
   // return x * x * x
   return Math.pow(x, 3)
 }
+// Built in method in JS used to raise a number to a given power. It takes in 2 arguments, the first is the base number, and the second is the exponent or power https://www.w3schools.com/js/js_math.asp
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 
 
 // Having narrowed down the number of cars, we will now be splitting up the team to hit the streets and check plates, to make sure we handle each days cars evenly we need to divide the number of cars out by the number of team members
@@ -26,6 +28,8 @@ function divideWholey(cars, teamMembers) {
 
   // simpler ...  return Math.trunc(cars / teamMembers);
 }
+// First we create the variable wholeNum and assign it the value of cars / teamMembers. Then we take this variable and pass it through the Math.trunc built in js method, which rounds down the result to the nearest integer. 
+
 
 // The sum of all numbers on a plate should be even, if its not the car is suspect
 
@@ -43,28 +47,27 @@ function isEven(num) {
 // Make it inclusive so that the starting and ending numbers are part 
 // of the range. HINT ** Utilize Javascript's Math Class (To the Google!)
 function numberGenerator(min, max) {
-  // idk how to explain this one...
-  // adding 1 here should help make sure it's including the min and max numbers that are part of the range.... look into this more. 
   return Math.round(Math.random() * (max - min + 1) + min)
 
   // another way...
-  let newMin = min;
-  let newMax = max;
+  // let newMin = min;
+  // let newMax = max;
 
-  if (min > max) {
-    max = newMin;
-    min = newMax;
-  }
+  // if (min > max) {
+  //   max = newMin;
+  //   min = newMax;
+  // }
 
-  let randomNumber = Math.floor(Math.random() * (max - min) + min);
+  // let randomNumber = Math.floor(Math.random() * (max - min) + min);
 
-  console.log(
-    "The random number",
-    randomNumber + " The min:",
-    min + " The max:",
-    max
-  );
-  console.log(min, randomNumber, max);
+  // console.log(
+  //   "The random number",
+  //   randomNumber + " The min:",
+  //   min + " The max:",
+  //   max
+  // );
+  // console.log(min, randomNumber, max);
 
-  return randomNumber;
+  // return randomNumber;
 }
+// We are ultimately trying to return a rabdin number between the min and max we are passing through the function. We can use JS's built in Math.random to randomly generate a number between 0 and 1, but since we need it within a specified range, we need to get the difference between the min and max, which gives us the range, but then add 1 so its inclusive of the entire range. Then we multiply that by Math.Random() which will get us a random number between 0 and the range. then we add the min value to shift the range up to the correct starting point. Then we use Math.Round to round the result to the nearest integer. 

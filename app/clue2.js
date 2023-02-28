@@ -9,6 +9,8 @@ function largerNum(num1, num2) {
   } else return num2
 }
 
+// Here we use a conditional statement to compare the 2 numbers
+
 
 // We also need to know how successful the criminals have been by grading their number of successes
 // Given two numbers, amount successful and total heists, return the corresponding letter grade on percentage that were successful.
@@ -52,6 +54,7 @@ function crimeGrader(successful, total) {
   //     default:
   //       return "A";
 }
+// 
 
 
 // To help us better catch the associate we need to know when they are most active.

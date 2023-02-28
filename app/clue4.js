@@ -1,7 +1,7 @@
 // We know that to pull off this caper Carmen will be wearing a disguise, we need to figure out what she will look like in order to nab her for sure this time.
 
 // Carmen likes to cycle her outfits and we know on certain days she wears certain outfits, decrypting the early letter we might have some idea of what day, but it might also be offset depending on the calander she is using.
-// WHAT ??
+
 // Given a string with the value of a day of the week, return the number that that day is in the week. A second argument will be provided to determine if should start week on Monday if true, else Sunday if false. If the string is not a day of the week but is bad input, then return the string 'That's not a day of the week'.
 // Example: 
 // input: 'Sunday', false
@@ -10,7 +10,7 @@
 // input: 'Sunday', true
 // output: 7
 
-// I don't understand this one, how do I explain?
+
 // switch takes in a day (check out w3 schools explanation for js switch statements)
 function daysPosition(day, offset) {
   let output

@@ -6,6 +6,9 @@
 
 function largerNum(num1, num2) {
   // TODO YOUR CODE HERE
+  if (num1 > num2) {
+    return num1
+  } else return num2
 }
 
 
@@ -21,6 +24,21 @@ function largerNum(num1, num2) {
 
 function crimeGrader(successful, total) {
   // TODO YOUR CODE HERE
+  let average = successful / total * 100
+  if (average >= 90) {
+    return 'A'
+  }
+  if (average >= 80) {
+    return 'B'
+  }
+  if (average >= 70) {
+    return 'C'
+  }
+  if (average >= 60) {
+    return 'D'
+  }
+  else return 'F'
+
 }
 
 
@@ -33,6 +51,16 @@ function crimeGrader(successful, total) {
 //   Make sure your ranges are inclusive
 function timeOfDay(hour) {
   // TODO YOUR CODE HERE
+  if (hour >= 5 && hour <= 11) {
+    return 'morning'
+  }
+  if (hour >= 12 && hour <= 17) {
+    return 'afternoon'
+  }
+  if (hour >= 18 && hour <= 21) {
+    return 'evening'
+  }
+  else return 'night'
 }
 
 // Our surveillance team finds the closer we get to catching the associate the hotter the person gets, we can use this to narrow down the person
@@ -40,6 +68,13 @@ function timeOfDay(hour) {
 // Write a function that will take in a number and return 'suspicious' if it indicates the person is over 98.6° and if the person is at or above 103° 'very suspicious', if it is under return 'not suspicious', (hint: try this with string concatenation)
 function isSuspicious(temp) {
   // TODO YOUR CODE HERE
+  if (temp >= 103) {
+    return 'very suspicious'
+  }
+  if (temp > 98.6) {
+    return 'suspicious'
+  }
+  else return 'not suspicious'
 }
 
 // We think we might have found the associate, and have added a tracker to their car, to find where the associate is hiding we need to know when their car is stopped
